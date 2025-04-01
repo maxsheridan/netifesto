@@ -28,7 +28,7 @@
     --max-width: 40rem;
     --body-font: 'Fanwood Text',serif,system-ui;
     --heading-font: 'League Gothic',sans-serif,system-ui;
-    --body-font-size: clamp(1.3rem,3vw,1.45rem);
+    --body-font-size: clamp(1.325rem,3vw,1.45rem);
     --line-height: 1.5;
     --primary-color: #161718;
     --accent-color: #8D8C8C;
