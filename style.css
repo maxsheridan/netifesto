@@ -36,6 +36,11 @@
     --background-color: #FBFAF7;                                
 }
 
+:focus-visible {
+    outline: 3px solid #AD0000;
+    outline-offset: 2px;
+}
+
 @media (prefers-color-scheme:dark){
     :root {
         --primary-color:#D3CEC1;
@@ -46,6 +51,9 @@
     }
     h3 {                                            
         letter-spacing: .5px;
+    }
+    :focus-visible {
+        outline: 3px solid #FF7A7A;
     }
 }
 
@@ -64,11 +72,6 @@
 
 .margins-off * {
     margin-block-start: 0;
-}
-
-:focus-visible {
-    outline: 3px solid #FF7A7A;
-    outline-offset: 2px;
 }
 
 html {
