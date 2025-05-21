@@ -113,6 +113,10 @@ main {
     margin: 0 auto;
 }
 
+.acme-flex-wrapper {
+    display: flex;
+}
+
 .title {
     text-align: center;
 }
@@ -121,27 +125,34 @@ main {
     margin-block-start: calc(var(--big-gap) + 1rem);
 }
 
-.below-the-fold {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.just-a-list li {
+    list-style: none;
+}
+
+.fancy-pants-list li {
+    list-style: decimal;
+    list-style-position: inside;
 }
 
 .downloads {
-    justify-content: flex-start;
     gap: 2rem;
 }
 
 .downloads svg, a.sticker-link {
-    display: flex;
     width: auto;
     height: 80px;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
 .copyright {
-    width: auto;
-    height: clamp(15px,2vw,17px);
-    padding-right: 4px;
+    margin-block-start: -3px;
 }
 
 a {
@@ -162,6 +173,10 @@ a {
     a:hover {
         opacity: .6;
     }
+}
+
+.center {
+    text-align: center
 }
 
 h1 {
@@ -201,15 +216,6 @@ hr {
     background: var(--accent-color);
 }
 
-.just-a-list li {
-    list-style: none;
-}
-
-.fancy-pants-list li {
-    list-style: decimal;
-    list-style-position: inside;
-}
-
 .arrow-lft {
     width: auto;
     height: clamp(11.5px,2vw,12.5px);
@@ -220,4 +226,13 @@ hr {
 .backlink {
     color: var(--link-color);
     fill: var(--link-color);
+}
+
+.vh {
+    position:absolute;
+    overflow:hidden;
+    width:1px;
+    height:1px;
+    clip-path:inset(50%);
+    white-space:nowrap;
 }
