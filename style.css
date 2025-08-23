@@ -233,17 +233,6 @@ hr {
     fill: var(--link-color);
 }
 
-.skip-link {
-    position:absolute;
-    top:-999px;left:50%;
-    transform:translateX(-50%);
-    color: var(--primary-color)}    
-    
-.skip-link:focus {
-    top:6px; 
-    color: var(--primary-color)}
-
-
 .vh {
     position:absolute;
     overflow:hidden;
