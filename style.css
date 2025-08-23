@@ -78,6 +78,10 @@ html {
     font-size: 16px;
 }
 
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -139,6 +143,7 @@ main {
 }
 
 .downloads svg, a.sticker-link {
+    display: inline-block;
     width: auto;
     height: 80px;
 }
