@@ -99,19 +99,6 @@ body {
     background-color: var(--background-color);
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding: clamp(1rem,3vw,2rem) 0;
-    width: 100%;
-    background-color: var(--background-color)
-}
-
 main {
     max-width: var(--max-width);
     margin: 0 auto;
