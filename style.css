@@ -208,6 +208,11 @@ hr {
     background: var(--accent-color);
 }
 
+.space {
+    display:inline-block;
+    width: .15rem;
+}
+
 .arrow-lft {
     width: auto;
     height: clamp(11.5px,2vw,12.5px);
