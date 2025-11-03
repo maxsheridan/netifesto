@@ -26,13 +26,13 @@
     --big-gap: 3.5rem;
     --outer-padding: 3rem 1rem;
     --max-width: 55ch;
-    --body-font: 'Fanwood Text',serif,system-ui;
-    --heading-font: 'League Gothic',sans-serif,system-ui;
-    --body-font-size: calc(1.2rem + .35vw);
-    --primary-color: #161718;
-    --accent-color: #8D8C8C;
-    --link-color: #AD0000;
-    --background-color: #FBFAF7;                                
+    --body: 'Fanwood Text',serif,system-ui;
+    --heading: 'League Gothic',sans-serif,system-ui;
+    --paragraph: calc(1.25rem + .35vw);
+    --primary: #161718;
+    --accent: #8D8C8C;
+    --link: #AD0000;
+    --background: #FBFAF7;                                
 }
 
 :focus-visible {
@@ -90,13 +90,13 @@ body {
     min-height: 100dvh;
     margin: unset;
     padding: var(--outer-padding);
-    font-family: var(--body-font);
-    font-size: var(--body-font-size);
+    font-family: var(--body);
+    font-size: var(--paragraph);
     font-weight: 400;
     font-style: normal;
     line-height: 1.5;
-    color: var(--primary-color);
-    background-color: var(--background-color);
+    color: var(--primary);
+    background-color: var(--background);
 }
 
 main {
@@ -148,10 +148,10 @@ footer {
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--primary);
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color: var(--accent-color);
+    text-decoration-color: var(--accent);
     text-decoration-skip: all;
     text-underline-offset: 2px;
     cursor: pointer;
@@ -180,7 +180,7 @@ a {
 
 
 h1 {
-    font-family: var(--heading-font);
+    font-family: var(--heading);
     font-size: calc(6.75rem + 1.7vw);
     font-weight: normal;
     line-height: 1;
@@ -197,14 +197,14 @@ h2 {
 }
 
 h3 {
-    font-family: var(--heading-font);
+    font-family: var(--heading);
     font-size: calc(2.5rem + .5vw);
     font-weight: normal;
     line-height: 1.3;
 }
 
 blockquote {
-    font-family: 'Fanwood Text',serif,system-ui;
+    font-family: var(--body);
     font-size: calc(1.35rem + .3vw);
     font-style: italic;
 }
@@ -212,7 +212,7 @@ blockquote {
 hr {
     height: 1px;
     margin-block: var(--big-gap);
-    background: var(--accent-color);
+    background: var(--accent);
 }
 
 .space {
@@ -227,8 +227,8 @@ hr {
 }
 
 .backlink {
-    color: var(--link-color);
-    fill: var(--link-color);
+    color: var(--link);
+    fill: var(--link);
 }
 
 .vh {
