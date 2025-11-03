@@ -25,7 +25,7 @@
     --gap: 1.25rem;
     --big-gap: 3.5rem;
     --outer-padding: 3rem 1rem;
-    --max-width: 38rem;
+    --max-width: 55ch;
     --body-font: 'Fanwood Text',serif,system-ui;
     --heading-font: 'League Gothic',sans-serif,system-ui;
     --body-font-size: calc(1.2rem + .35vw);
