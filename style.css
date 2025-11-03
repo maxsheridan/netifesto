@@ -28,7 +28,7 @@
     --max-width: 55ch;
     --body: 'Fanwood Text',serif,system-ui;
     --heading: 'League Gothic',sans-serif,system-ui;
-    --paragraph: calc(1.25rem + .35vw);
+    --paragraph: calc(1.3rem + .35vw);
     --primary: #161718;
     --accent: #8D8C8C;
     --link: #AD0000;
