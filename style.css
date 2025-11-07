@@ -154,17 +154,18 @@ a {
     text-decoration-color: var(--accent);
     text-decoration-skip: all;
     text-underline-offset: 2px;
-    cursor: pointer;
-}
-
-.linkstyling-off {
-    text-decoration: none;
+    cursor: pointer; 
+    transition: opacity .2s ease;
 }
 
 @media (hover:hover) and (pointer:fine) {
     a:hover {
         opacity: .6;
     }
+}
+
+.linkstyling-off {
+    text-decoration: none;
 }
 
 .center {
