@@ -221,15 +221,14 @@ hr {
     width: .15rem;
 }
 
-.arrow-lft {
-    width: auto;
-    height: calc(12.5px + .2vw);
-    vertical-align: baseline;
-}
-
-.backlink {
+.back {
     color: var(--link);
     fill: var(--link);
+}
+
+.arrow-lft {
+    width: auto;
+    height: 1.15rem;
 }
 
 .vh {
