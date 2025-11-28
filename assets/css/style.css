@@ -30,7 +30,6 @@
     --space-2: calc(var(--space-1) * var(--ratio));
     --space-3: calc(var(--space-2) * var(--ratio));
     --space-4: calc(var(--space-3) * var(--ratio));
-    --outer-padding: 3rem 2rem;
     --max-width: 55ch;
     --body: 'Fanwood Text',serif,system-ui;
     --heading: 'League Gothic',sans-serif,system-ui;
@@ -73,6 +72,9 @@
 
 html {
     font-size: 16px;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: #fff0;
 }
 
 html:focus-within {
@@ -87,7 +89,7 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     margin: unset;
-    padding: var(--outer-padding);
+    padding: var(--space-3) var(--space-1);
     font-family: var(--body);
     font-size: var(--paragraph);
     font-weight: 400;
