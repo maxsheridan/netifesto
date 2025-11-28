@@ -22,8 +22,14 @@
 }
 
 :root {
-    --gap: 1.25rem;
-    --big-gap: 3.5rem;
+    --ratio: 1.5;
+    --space--2: calc(var(--space--1) / var(--ratio));
+    --space--1: calc(var(--space-0) / var(--ratio));
+    --space-0: 1rem;
+    --space-1: calc(var(--space-0) * var(--ratio));
+    --space-2: calc(var(--space-1) * var(--ratio));
+    --space-3: calc(var(--space-2) * var(--ratio));
+    --space-4: calc(var(--space-3) * var(--ratio));
     --outer-padding: 3rem 2rem;
     --max-width: 55ch;
     --body: 'Fanwood Text',serif,system-ui;
@@ -65,14 +71,6 @@
     overscroll-behavior: none;
 }
 
-* + * {
-    margin-block-start: var(--gap);
-}
-
-.margins-off * {
-    margin-block-start: 0;
-}
-
 html {
     font-size: 16px;
 }
@@ -104,72 +102,46 @@ main {
     margin: 0 auto;
 }
 
-.acme-flex-wrapper {
-    display: flex;
+.space--2 > * + * {
+    margin-block-start: var(--space--2);
 }
 
-.title {
-    text-align: center;
+.space--1 > * + * {
+    margin-block-start: var(--space--1);
 }
 
-.intro {
-    margin-block-start: calc(var(--big-gap) + 1rem);
+.space-1 > * + * {
+    margin-block-start: var(--space-1);
 }
 
-.just-a-list li {
-    list-style: none;
+.space-2 > * + * {
+    margin-block-start: var(--space-2);
 }
 
-.fancy-pants-list li {
-    list-style: decimal;
-    list-style-position: inside;
+.space-3 > * + * {
+    margin-block-start: var(--space-3);
 }
 
-.downloads {
-    gap: 2rem;
+.space-4 > * + * {
+    margin-block-start: var(--space-4);
 }
 
-.downloads svg, a.sticker-link {
+.gap--2 {
     display: inline-block;
-    width: auto;
-    height: 80px;
+    width: var(--space--2);
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: var(--max-width);
-    margin: 0 auto;
-}
-
-.copyright {
-    margin-block-start: -3px;
-}
-
-a {
-    color: var(--primary);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--accent);
-    text-decoration-skip: all;
-    text-underline-offset: 2px;
-    cursor: pointer; 
-    transition: opacity .2s ease;
-}
-
-@media (hover:hover) and (pointer:fine) {
-    a:hover {
-        opacity: .6;
-    }
-}
-
-.linkstyling-off {
-    text-decoration: none;
+.gap--1 {
+    display: inline-block;
+    width: var(--space--1);
 }
 
 .center {
-    text-align: center
+    text-align: center;
+}
+
+.flex {
+    display: flex;
 }
 
 .flex-center {
@@ -179,16 +151,11 @@ a {
     align-items: center;
 }
 
-
 h1 {
     font-family: var(--heading);
     font-size: calc(6.75rem + 1.7vw);
     font-weight: normal;
     line-height: 1;
-}
-
-h1:not(.title h1) {
-    text-align: center;
 }
 
 h2 {
@@ -212,23 +179,71 @@ blockquote {
 
 hr {
     height: 1px;
-    margin-block: var(--big-gap);
     background: var(--accent);
 }
 
-.space {
-    display:inline-block;
-    width: .15rem;
+.just-a-list li {
+    list-style: none;
 }
 
-.back {
+.fancy-pants-list li {
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.downloads {
+    gap: 2rem;
+}
+
+.downloads svg, 
+a.sticker-link {
+    display: inline-block;
+    width: auto;
+    height: 80px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: var(--space-3) auto 0;
+}
+
+.copyright {
+    position: relative;
+    top: -0.15em;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent);
+    text-decoration-skip: all;
+    text-underline-offset: 2px;
+    cursor: pointer; 
+    transition: opacity .2s ease;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    a:hover {
+        opacity: .6;
+    }
+}
+
+.linkstyling-off {
+    text-decoration: none;
+}
+
+.backlink > a {
     color: var(--link);
     fill: var(--link);
 }
 
 .arrow-lft {
     width: auto;
-    height: 1.15rem;
+    height: .7em;
 }
 
 .vh {
