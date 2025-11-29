@@ -45,13 +45,13 @@
     outline-offset: 2px;
 }
 
-@media (prefers-color-scheme:dark){
+@media (prefers-color-scheme: dark){
     :root {
-        --primary-color:#D3CEC1;
-        --link-color:#FF7A7A;
-        --accent-color:#8D8C8C;
-        --background-color:#161718;
-        --dark-primary-color: #161718;
+        --primary:#D3CEC1;
+        --link:#FF7A7A;
+        --accent:#8D8C8C;
+        --background:#161718;
+        --dark-primary: #161718;
     }
     h3 {                                            
         letter-spacing: .5px;
